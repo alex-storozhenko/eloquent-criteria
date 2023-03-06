@@ -31,7 +31,7 @@ class CriteriaBuilder
     private function applyIfNotApplied(Criteria $criteria): static
     {
         // Prevent duplicate criteria applying
-        if (!in_array(get_class($criteria), $this->applied)) {
+        if (! in_array(get_class($criteria), $this->applied)) {
             $this->applied[] = get_class($criteria);
             $this->builder = $criteria->apply($this->builder);
         }

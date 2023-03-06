@@ -2,8 +2,8 @@
 
 namespace AlexStorozhenko\EloquentCriteria\Tests;
 
-use Orchestra\Testbench\TestCase as Orchestra;
 use AlexStorozhenko\EloquentCriteria\EloquentCriteriaServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {
