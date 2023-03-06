@@ -5,11 +5,13 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/alex-storozhenko/eloquent-criteria/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/alex-storozhenko/eloquent-criteria/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/alex-storozhenko/eloquent-criteria.svg?style=flat-square)](https://packagist.org/packages/alex-storozhenko/eloquent-criteria)
 
-It is lightweight implementation of Criteria Builder for Eloquent. 
-It's like a LEGO® for Eloquent Builder that provide easy de-couple and reuse of query modifiers.
+This is a lightweight implementation of Criteria Builder for Eloquent.
+It's like LEGO® for Eloquent Builder, providing easy decoupling and reuse of query modifiers.
 
-Sure main goal its modify query in specified way because Criteria are very similar to Eloquent scopes. 
-The main difference is that they can be applied to different models across the application and encapsulate harder conditions with additional logic.
+Obviously, the main purpose is to modify the query in the specified way, 
+since Criteria are very similar to Eloquent scopes, 
+only with that they can be applied to different models in a program 
+and encapsulate more complex conditions with additional logic in a pretty clean way.
 
 ## Installation
 
