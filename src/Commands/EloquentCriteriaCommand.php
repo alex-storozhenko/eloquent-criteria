@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace AlexStorozhenko\EloquentCriteria\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class EloquentCriteriaCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'eloquent-criteria';
 
     public $description = 'My command';
 

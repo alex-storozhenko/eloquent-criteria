@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace AlexStorozhenko\EloquentCriteria;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
+use AlexStorozhenko\EloquentCriteria\Commands\EloquentCriteriaCommand;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class EloquentCriteriaServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -16,10 +16,7 @@ class SkeletonServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('skeleton')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_skeleton_table')
-            ->hasCommand(SkeletonCommand::class);
+            ->name('eloquent-criteria')
+            ->hasCommand(EloquentCriteriaCommand::class);
     }
 }
