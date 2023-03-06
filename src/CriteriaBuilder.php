@@ -8,6 +8,7 @@ use AlexStorozhenko\EloquentCriteria\Contracts\Criteria;
 use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
 use Illuminate\Support\Traits\ForwardsCalls;
 
+/** @mixin EloquentBuilder */
 class CriteriaBuilder
 {
     use ForwardsCalls;

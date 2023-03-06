@@ -35,8 +35,7 @@
     },
     "autoload": {
         "psr-4": {
-            "AlexStorozhenko\\EloquentCriteria\\": "src",
-            "AlexStorozhenko\\EloquentCriteria\\Database\\Factories\\": "database/factories"
+            "AlexStorozhenko\\EloquentCriteria\\": "src"
         }
     },
     "autoload-dev": {

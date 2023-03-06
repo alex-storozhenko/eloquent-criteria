@@ -14,6 +14,6 @@ trait CriteriaQuery
 
     public function criteriaQuery(): CriteriaBuilder
     {
-        return CriteriaBuilder::for($this);
+        return CriteriaBuilder::for($this->query());
     }
 }
