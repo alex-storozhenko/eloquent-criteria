@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace AlexStorozhenko\EloquentCriteria\Concerns;
 
 use AlexStorozhenko\EloquentCriteria\Contracts\Criteria;

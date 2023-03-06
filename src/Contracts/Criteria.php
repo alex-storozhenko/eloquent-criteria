@@ -8,8 +8,5 @@ use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
 
 interface Criteria
 {
-    /**
-     * Apply criteria to query
-     */
     public function apply(EloquentBuilder $builder): EloquentBuilder;
 }
