@@ -9,7 +9,7 @@ return [
     | This option controls the ability to add a macro to the eloquent builder,
     | which allows, when enabled, to add criteria builder functionality to the eloquent
     | at the global level
-    | methods criteriaQuery(), applyCriteria() will be added
+    | methods criteriaQuery(), apply() will be added
     | to the Eloquent through the macro
     |
     */
