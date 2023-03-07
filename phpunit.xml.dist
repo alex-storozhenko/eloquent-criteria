@@ -16,7 +16,7 @@
     backupStaticProperties="false"
 >
     <testsuites>
-        <testsuite name="AlexStorozhenko Test Suite">
+        <testsuite name="CriteriaQueryTestSuite">
             <directory>tests</directory>
         </testsuite>
     </testsuites>

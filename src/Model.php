@@ -7,7 +7,7 @@ namespace AlexStorozhenko\EloquentCriteria;
 use AlexStorozhenko\EloquentCriteria\Concerns\CriteriaQuery;
 use Illuminate\Database\Eloquent\Model as EloquentModel;
 
-abstract class EloquentCriteriaModel extends EloquentModel
+abstract class Model extends EloquentModel
 {
     use CriteriaQuery;
 }

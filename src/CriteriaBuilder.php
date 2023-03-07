@@ -29,6 +29,12 @@ class CriteriaBuilder
         return $this->applyIfNotApplied($criteria);
     }
 
+    /** alias for apply() method needed for the keep chain of calls from eloquent query */
+    public function applyCriteria(Criteria $criteria): static
+    {
+        return $this->apply($criteria);
+    }
+
     private function applyIfNotApplied(Criteria $criteria): static
     {
         // Prevent duplicate criteria applying

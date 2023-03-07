@@ -11,4 +11,15 @@ class TestCase extends Orchestra
     {
         return [EloquentCriteriaServiceProvider::class];
     }
+
+    protected function getEnvironmentSetUp($app)
+    {
+        config()->set('database.connections.test', [
+            'driver' => 'sqlite',
+            'database' => ':memory:',
+            'prefix' => 'eloquent_criteria_',
+        ]);
+
+        config()->set('database.default', 'test');
+    }
 }

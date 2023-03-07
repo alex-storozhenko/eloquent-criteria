@@ -15,7 +15,8 @@ class EloquentCriteriaServiceProvider extends PackageServiceProvider
     {
         parent::boot();
 
-        if (config('eloquent-criteria.macro_enabled')) {
+        if (config('eloquent-criteria.macro_enabled')
+            || $this->app->runningUnitTests()) {
             /**
              * $this will bind as EloquentBuilder according macro rule
              *
