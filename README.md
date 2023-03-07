@@ -1,3 +1,7 @@
+![Eloquent Criteria like LEGO® for Eloquent Builder](./art/banner.png)
+
+---
+
 # Eloquent Criteria
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/alex-storozhenko/eloquent-criteria.svg?style=flat-square)](https://packagist.org/packages/alex-storozhenko/eloquent-criteria)
