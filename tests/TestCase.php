@@ -1,36 +1,25 @@
 <?php
 
-namespace VendorName\Skeleton\Tests;
+namespace AlexStorozhenko\EloquentCriteria\Tests;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
+use AlexStorozhenko\EloquentCriteria\EloquentCriteriaServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
-use VendorName\Skeleton\SkeletonServiceProvider;
 
 class TestCase extends Orchestra
 {
-    protected function setUp(): void
+    protected function getPackageProviders($app): array
     {
-        parent::setUp();
-
-        Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'VendorName\\Skeleton\\Database\\Factories\\'.class_basename($modelName).'Factory'
-        );
+        return [EloquentCriteriaServiceProvider::class];
     }
 
-    protected function getPackageProviders($app)
+    protected function getEnvironmentSetUp($app)
     {
-        return [
-            SkeletonServiceProvider::class,
-        ];
-    }
+        config()->set('database.connections.test', [
+            'driver' => 'sqlite',
+            'database' => ':memory:',
+            'prefix' => 'eloquent_criteria_',
+        ]);
 
-    public function getEnvironmentSetUp($app)
-    {
-        config()->set('database.default', 'testing');
-
-        /*
-        $migration = include __DIR__.'/../database/migrations/create_skeleton_table.php.stub';
-        $migration->up();
-        */
+        config()->set('database.default', 'test');
     }
 }
