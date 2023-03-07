@@ -73,7 +73,7 @@ it('can apply group of criteria one by one', function () {
         protected $guarded = [];
     };
 
-    expect($user->applyCriteria(new CriteriaChain(
+    expect($user->apply(new CriteriaChain(
         new class() implements Criteria
         {
             public function apply(Builder $builder): Builder

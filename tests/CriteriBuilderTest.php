@@ -123,9 +123,9 @@ it('can support chain of calls and do forward to Eloquent', function () {
     };
 
     expect($user
-        ->applyCriteria($criteria)
+        ->apply($criteria)
         ->orWhereNotNull('is_banned_at')
-        ->applyCriteria(new class() implements Criteria
+        ->apply(new class() implements Criteria
         {
             public function apply(Builder $builder): Builder
             {

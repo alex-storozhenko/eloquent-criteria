@@ -5,11 +5,12 @@ declare(strict_types=1);
 namespace AlexStorozhenko\EloquentCriteria;
 
 use AlexStorozhenko\EloquentCriteria\Contracts\Criteria;
+use AlexStorozhenko\EloquentCriteria\Contracts\CriteriaBuilder as CriteriaBuilderContract;
 use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
 use Illuminate\Support\Traits\ForwardsCalls;
 
 /** @mixin EloquentBuilder */
-class CriteriaBuilder
+final class CriteriaBuilder implements CriteriaBuilderContract
 {
     use ForwardsCalls;
 
@@ -19,23 +20,17 @@ class CriteriaBuilder
     {
     }
 
-    public static function for(EloquentBuilder $builder): static
+    public static function for(EloquentBuilder $builder): CriteriaBuilder
     {
-        return new static($builder);
+        return new self($builder);
     }
 
-    public function apply(Criteria $criteria): static
+    public function apply(Criteria $criteria): CriteriaBuilder
     {
         return $this->applyIfNotApplied($criteria);
     }
 
-    /** alias for apply() method needed for the keep chain of calls from eloquent query */
-    public function applyCriteria(Criteria $criteria): static
-    {
-        return $this->apply($criteria);
-    }
-
-    private function applyIfNotApplied(Criteria $criteria): static
+    private function applyIfNotApplied(Criteria $criteria): CriteriaBuilder
     {
         // Prevent duplicate criteria applying
         if (! in_array(get_class($criteria), $this->applied)) {

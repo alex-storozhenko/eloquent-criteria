@@ -24,7 +24,7 @@ class EloquentCriteriaServiceProvider extends PackageServiceProvider
              * @see Closure::bindTo()
              */
             Builder::macro('criteriaQuery', fn () => CriteriaBuilder::for($this));
-            Builder::macro('applyCriteria', fn (Criteria $criteria) => CriteriaBuilder::for($this)->apply($criteria));
+            Builder::macro('apply', fn (Criteria $criteria) => CriteriaBuilder::for($this)->apply($criteria));
         }
 
         return $this;

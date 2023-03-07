@@ -15,7 +15,7 @@ it('can add methods for interact with criteria builder to Eloquent globally', fu
 
     expect($user->criteriaQuery())
         ->toBeInstanceOf(CriteriaBuilder::class)
-        ->and($user->applyCriteria(new class() implements Criteria
+        ->and($user->apply(new class() implements Criteria
         {
             public function apply(Builder $builder): Builder
             {

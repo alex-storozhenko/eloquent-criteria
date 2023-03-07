@@ -9,7 +9,7 @@ use AlexStorozhenko\EloquentCriteria\CriteriaBuilder;
 
 trait CriteriaQuery
 {
-    public function applyCriteria(Criteria $criteria): CriteriaBuilder
+    public function apply(Criteria $criteria): CriteriaBuilder
     {
         return $this->criteriaQuery()->apply($criteria);
     }
