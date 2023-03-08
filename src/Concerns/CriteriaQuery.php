@@ -9,13 +9,13 @@ use AlexStorozhenko\EloquentCriteria\CriteriaBuilder;
 
 trait CriteriaQuery
 {
-    public function apply(Criteria $criteria): CriteriaBuilder
+    public static function apply(Criteria $criteria): CriteriaBuilder
     {
-        return $this->criteriaQuery()->apply($criteria);
+        return static::criteriaQuery()->apply($criteria);
     }
 
-    public function criteriaQuery(): CriteriaBuilder
+    public static function criteriaQuery(): CriteriaBuilder
     {
-        return CriteriaBuilder::for($this->query());
+        return CriteriaBuilder::for(static::query());
     }
 }
