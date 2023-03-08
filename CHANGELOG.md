@@ -12,8 +12,8 @@ All notable changes to `eloquent-criteria` will be documented in this file.
 - allow to call criteriaQuery and apply statically without macro
 - remove inUnitTest check in ServiceProvider
 
-## v1.0.0 - 2023-03-08
+## release-v1.0.0 - 2023-03-08
 
-### Changes
+#### Changes
 
 - Initial Release
