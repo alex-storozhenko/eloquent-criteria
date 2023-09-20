@@ -9,6 +9,13 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/alex-storozhenko/eloquent-criteria/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/alex-storozhenko/eloquent-criteria/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/alex-storozhenko/eloquent-criteria.svg?style=flat-square)](https://packagist.org/packages/alex-storozhenko/eloquent-criteria)
 
+### ⚠️ Compatibility Notes:
+Please use 1.x.x version for Laravel 9 compatibility:
+
+```bash
+composer require alex-storozhenko/eloquent-criteria ^1.1
+```
+
 This is a lightweight implementation of Criteria Builder for Eloquent.
 It's like LEGO® for Eloquent Builder, providing easy decoupling and reuse of query modifiers.
 
